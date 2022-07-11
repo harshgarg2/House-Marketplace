@@ -17,6 +17,7 @@ function Contact() {
       const docSnap = await getDoc(docRef)
        console.log(docSnap.data())
       if (docSnap.exists()) {
+        setLandlord(docSnap.data())
       } else {
         toast.error('Could not get landlord data')
       }
